@@ -12,10 +12,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <Route path="/" component={App} exact />
+      <Route path="/" component={SuperSimpleExample} exact />
+      <Route path="/sudoku" component={App} exact />
       <Route path="/SimpleExample" component={SimpleExample} exact />
       <Route path="/HotelsExample" component={HotelsExample} exact />
-      <Route path="/SuperEasy" component={SuperSimpleExample} exact />
     </Router>
   </React.StrictMode>
 );
