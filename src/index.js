@@ -1,13 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import SimpleExample from "./SimpleExample";
+import HotelsExample from "./HotelsExample";
+import SuperSimpleExample from "./SuperSimpleExample";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Route path="/" component={App} exact />
+      <Route path="/SimpleExample" component={SimpleExample} exact />
+      <Route path="/HotelsExample" component={HotelsExample} exact />
+      <Route path="/SuperEasy" component={SuperSimpleExample} exact />
+    </Router>
   </React.StrictMode>
 );
 
